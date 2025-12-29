@@ -13,9 +13,18 @@ export default function Home() {
           priority
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
+
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+            <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+              When I find myself in times of trouble, Mother Mary comes to me
+            </h1>
+            <h2 className="text-2xl font-bold text-red-600 sm:ml-auto sm:text-right">
+              Don't get in trouble
+            </h2>
+            <h3 className="text-2xl font-bold text-blue-600 sm:ml-auto sm:text-right">
+              Fuck the police
+            </h3>
+          </div>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
@@ -32,6 +41,7 @@ export default function Home() {
               Learning
             </a>{" "}
             center.
+            Otherwise call 911
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
@@ -48,7 +58,7 @@ export default function Home() {
               width={16}
               height={16}
             />
-            Deploy Now
+            Release app
           </a>
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
@@ -56,7 +66,15 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Documentation
+            More info
+          </a>
+          <a
+            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub repo
           </a>
         </div>
       </main>
