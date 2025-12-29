@@ -1,4 +1,33 @@
+'use client'
 import Image from "next/image";
+// lets import react's useState
+import { useState } from "react";
+
+// lets write a simple counter component with + and - buttons
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  const doubleCount = count * 2;
+
+  return (
+    <div className="flex items-center gap-4">
+      <button
+        className="px-4 py-2 bg-red-500 text-white rounded"
+        onClick={() => setCount(count - 1)}
+      >
+        -
+      </button>
+      <span className="text-xl">{count}</span>
+      <button
+        className="px-4 py-2 bg-green-500 text-white rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        +
+      </button>
+      <span className="text-xl text-gray-500">Double: {doubleCount}</span>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -21,9 +50,8 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-red-600 sm:ml-auto sm:text-right">
               Don't get in trouble
             </h2>
-            <h3 className="text-2xl font-bold text-blue-600 sm:ml-auto sm:text-right">
-              Fuck the police
-            </h3>
+            {/* lets add the counter component */}
+            <Counter />
           </div>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
